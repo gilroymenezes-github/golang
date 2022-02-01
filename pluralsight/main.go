@@ -13,10 +13,23 @@ const (
 
 
 func main() {
-	fmt.Println(pi)
+
+	type user struct {
+		ID int
+		FirstName string
+		LastName string
+	}
+
+	var u user
+	u.ID = 1
+	u.FirstName = "Cigar"
+	u.LastName = "Barbar"
+	fmt.Println(u, u.FirstName)
+
+	u2 := user{ ID: 1, FirstName: "Goo", LastName: "Mang"}
+	fmt.Println(pi, u2)
 
 	fmt.Println(first, second, third)
-
 	
 	const c = 3
 	fmt.Println(c + 3, c + 1.2)
